@@ -1,45 +1,49 @@
 #include <stdio.h>
 
+void moverTorre (int casas){
+
+    if (casas > 0)
+    {
+        printf("Direita!\n");
+            moverTorre(casas - 1);
+    }
+    
+}
+void moverBispo (int casas){
+
+    if(casas > 0){
+        printf("Cima, Direita!\n");
+            moverBispo(casas - 1);
+    }
+}
+
+void moverRainha(int casas){
+
+    if(casas > 0){
+        printf("Esquerda!\n");
+            moverRainha(casas - 1);
+}}
+
 
 int main() {
     
         //Declarando e iniciando as variaveis com valor 0
-    int t = 0, b = 0, r = 0, c = 0;
+    int c = 0;
 
-
-        //Laço de repetição simulando a movimentação da Torre
     printf("Torre moveu-se para:\n");
-    for (t ; t < 5; t++)
-    {
-    printf("Direita\n");
-    }
-
+    moverTorre(5);
 
         printf("--------------\n");
 
-
-        //Laço de repetição simulando a movimentação do Bisbo
     printf("Bispo moveu-se para:\n");
-    while (b < 5)
-    {
-        printf("Cima, Direita\n");
-        b++;
-    }
-
+    moverBispo(5);
 
         printf("--------------\n");
 
+    printf("Rainha moveu-se para:\n");
+    moverRainha(8);
 
-         //Laço de repetição simulando a movimentação da Rainha
-    printf("Rainha se moveu para:\n");
-    do
-    {
-        printf("Esquerda\n");
-        r++;
-    } while (r <= 7);
-    
-
-            printf("--------------\n");
+        printf("--------------\n");
 
 
          //Laço de repetição simulando a movimentação do Cavalo
@@ -48,11 +52,11 @@ int main() {
     {
         while (c < 2)
         {
-            printf("Baixo\n");
+            printf("Baixo!\n");
             c++;
         }
         
-        printf("Esquerda\n");
+        printf("Esquerda!\n");
     }
     
     
